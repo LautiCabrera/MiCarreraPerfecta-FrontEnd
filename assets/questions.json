@@ -1,0 +1,143 @@
+{
+    "questions": {
+      "branch": [
+        {
+          "id": 1,
+          "filtro": "Ingenierías",
+          "pregunta": "¿Te interesan los desafíos relacionados con el diseño y la construcción de estructuras o sistemas tecnológicos?"
+        },
+        {
+          "id": 2,
+          "filtro": "Medicina",
+          "pregunta": "¿Tienes interés en el estudio del cuerpo humano y la atención médica?"
+        },
+        {
+          "id": 3,
+          "filtro": "Ciencias de la Educación",
+          "pregunta": "¿Te atrae entender los procesos de enseñanza y aprendizaje?"
+        },
+        {
+          "id": 4,
+          "filtro": "Artes y Diseño",
+          "pregunta": "¿Disfrutas expresándote a través de formas visuales o creativas?"
+        },
+        {
+          "id": 5,
+          "filtro": "Ciencias Económicas",
+          "pregunta": "¿Tienes interés en comprender cómo funcionan los mercados y las decisiones económicas?"
+        },
+        {
+          "id": 6,
+          "filtro": "Humanidades y Ciencias Sociales",
+          "pregunta": "¿Te interesa explorar la cultura, la historia y el comportamiento humano?"
+        },
+        {
+          "id": 7,
+          "filtro": "Ciencias Aplicadas a la Industria",
+          "pregunta": "¿Te gustaría aplicar conocimientos científicos y técnicos para mejorar procesos industriales?"
+        },
+        {
+          "id": 8,
+          "filtro": "Ciencias Agrarias",
+          "pregunta": "¿Te atrae el estudio de la agricultura, la ganadería y la gestión de recursos agrícolas?"
+        },
+        {
+          "id": 9,
+          "filtro": "Logística",
+          "pregunta": "¿Te interesa la gestión eficiente de la cadena de suministro?"
+        },
+        {
+          "id": 10,
+          "filtro": "Ciencias de la Computación",
+          "pregunta": "¿Disfrutas resolviendo problemas mediante el uso de la tecnología?"
+        },
+        {
+          "id": 11,
+          "filtro": "Ciencias Exactas y Naturales",
+          "pregunta": "¿Te gusta explorar las leyes y principios que rigen el mundo físico y natural?"
+        },
+        {
+          "id": 12,
+          "filtro": "Filosofía y Letras",
+          "pregunta": "¿Disfrutas del análisis y la interpretación de la cultura, el pensamiento humano y las expresiones artísticas?"
+        },
+        {
+          "id": 13,
+          "filtro": "Derecho",
+          "pregunta": "¿Te interesa la aplicación y comprensión de las normas jurídicas?"
+        },
+        {
+          "id": 14,
+          "filtro": "Seguridad Pública",
+          "pregunta": "¿Tienes interés en la prevención y control de delitos para garantizar la seguridad pública?"
+        },
+        {
+          "id": 15,
+          "filtro": "Odontología",
+          "pregunta": "¿Te atrae el estudio de la salud bucal y la atención odontológica?"
+        },
+        {
+          "id": 16,
+          "filtro": "Ciencias de la Salud",
+          "pregunta": "¿Te interesa contribuir a la promoción de la salud y el tratamiento de enfermedades?"
+        },
+        {
+          "id": 17,
+          "filtro": "Turismo",
+          "pregunta": "¿Disfrutas explorar destinos turísticos y gestionar experiencias para los viajeros?"
+        }
+      ],
+      "preference": [
+        {
+          "id": 1,
+          "filtro": "Cognitiva",
+          "pregunta": "¿Encuentras satisfacción en el pensamiento crítico?"
+        },
+        {
+          "id": 2,
+          "filtro": "Social",
+          "pregunta": "¿Prefieres trabajar en equipo que de forma individual?"
+        },
+        {
+          "id": 3,
+          "filtro": "Motor",
+          "pregunta": "¿Te gusta mantenerte activo/a físicamente?"
+        },
+        {
+          "id": 4,
+          "filtro": "Creativa",
+          "pregunta": "¿Disfrutas de actividades artísticas o de diseño?"
+        },
+        {
+          "id": 5,
+          "filtro": "Emocional",
+          "pregunta": "¿Eres capaz de manejar el estrés de manera efectiva?"
+        },
+        {
+          "id": 6,
+          "filtro": "Lingüística",
+          "pregunta": "¿Disfrutas de la lectura, escritura y expresión verbal?"
+        },
+        {
+          "id": 7,
+          "filtro": "Tecnológica",
+          "pregunta": "¿Tienes interés en la tecnología y la informática?"
+        },
+        {
+          "id": 8,
+          "filtro": "Resolución de Problemas",
+          "pregunta": "¿Eres bueno/a para analizar datos y tomar decisiones?"
+        },
+        {
+          "id": 9,
+          "filtro": "Adaptación",
+          "pregunta": "¿Eres capaz de adaptarte fácilmente a nuevos entornos?"
+        },
+        {
+          "id": 10,
+          "filtro": "Éticas y Moral",
+          "pregunta": "¿Valoras la honestidad y la integridad en tus decisiones?"
+        }
+      ]
+    }
+  }
