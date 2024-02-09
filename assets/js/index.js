@@ -8,7 +8,6 @@ async function uploadQuestions() {
       }
       const datos = await respuesta.json();
       data = datos;
-      console.log(data)
     } catch (error) {
       console.error('Error al cargar las preguntas:', error);
       return [];
