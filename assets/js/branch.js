@@ -80,11 +80,12 @@ async function enviarRespuestasBranch() {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(data)
-    });
-
+    })
     if (respuesta.ok) {
-      const ramasDeInteres = await respuesta.json();
-      console.log("Ramas de interés:", ramasDeInteres);
+      // Redireccionar al usuario a la encuesta de preferencias
+      // window.location.href = `.html`;
+      const data = await respuesta.json(); // Esto convierte la respuesta del servidor en JSON
+      console.log('Respuesta del servidor:', data);
     } else {
       console.log("Error al procesar respuestas:", respuesta.statusText);
     }

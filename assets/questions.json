@@ -138,6 +138,224 @@
           "filtro": "Éticas y Moral",
           "pregunta": "¿Valoras la honestidad y la integridad en tus decisiones?"
         }
-      ]
+      ],
+      "intelligences": {
+        "espacial": [
+          {
+            "id": 1,
+            "filtro": "Espacial",
+            "pregunta": "¿Tengo facilidad para imaginar o representar objetos en el espacio?"
+          },
+          {
+            "id": 2,
+            "filtro": "Espacial",
+            "pregunta": "¿Me siento a gusto observando construcciones y estructuras arquitectónicas?"
+          },
+          {
+            "id": 3,
+            "filtro": "Espacial",
+            "pregunta": "¿Encuentro sencillo orientarme en un entorno desconocido?"
+          },
+          {
+            "id": 4,
+            "filtro": "Espacial",
+            "pregunta": "¿Disfruto de la resolución de rompecabezas o juegos de tipo espacial?"
+          },
+          {
+            "id": 5,
+            "filtro": "Espacial",
+            "pregunta": "¿Soy bueno/a dibujando o creando diseños visuales?"
+          }
+        ],
+        "corporal": [
+          {
+            "id": 6,
+            "filtro": "Corporal",
+            "pregunta": "¿Me gusta mantenerme activo/a físicamente?"
+          },
+          {
+            "id": 7,
+            "filtro": "Corporal",
+            "pregunta": "¿Tengo habilidad para realizar actividades que requieren coordinación motora?"
+          },
+          {
+            "id": 8,
+            "filtro": "Corporal",
+            "pregunta": "¿Disfruto de actividades que implican movimiento físico, como el baile o el deporte?"
+          },
+          {
+            "id": 9,
+            "filtro": "Corporal",
+            "pregunta": "¿Aprendo mejor cuando participo activamente en actividades prácticas?"
+          },
+          {
+            "id": 10,
+            "filtro": "Corporal",
+            "pregunta": "¿Soy consciente de mi cuerpo y su movimiento en el espacio?"
+          }
+        ],
+        "naturalista": [
+          {
+            "id": 11,
+            "filtro": "Naturalista",
+            "pregunta": "¿Me gusta observar y explorar la naturaleza?"
+          },
+          {
+            "id": 12,
+            "filtro": "Naturalista",
+            "pregunta": "¿Puedo identificar diferentes especies de plantas o animales?"
+          },
+          {
+            "id": 13,
+            "filtro": "Naturalista",
+            "pregunta": "¿Encuentro interesante el estudio de los ecosistemas y la biodiversidad?"
+          },
+          {
+            "id": 14,
+            "filtro": "Naturalista",
+            "pregunta": "¿Disfruto de actividades al aire libre, como acampar o hacer senderismo?"
+          },
+          {
+            "id": 15,
+            "filtro": "Naturalista",
+            "pregunta": "¿Tengo habilidades para clasificar y organizar elementos del entorno natural?"
+          }
+        ],
+        "musical": [
+          {
+            "id": 16,
+            "filtro": "Musical",
+            "pregunta": "¿Asocio la música con diferentes estados de ánimo?"
+          },
+          {
+            "id": 17,
+            "filtro": "Musical",
+            "pregunta": "¿Disfruto tararear, silbar o cantar en mi tiempo libre?"
+          },
+          {
+            "id": 18,
+            "filtro": "Musical",
+            "pregunta": "¿Me gusta tocar algún instrumento musical o lo he hecho en el pasado?"
+          },
+          {
+            "id": 19,
+            "filtro": "Musical",
+            "pregunta": "¿Puedo identificar fácilmente melodías o ritmos musicales?"
+          },
+          {
+            "id": 20,
+            "filtro": "Musical",
+            "pregunta": "¿Encuentro la vida menos completa sin música?"
+          }
+        ],
+        "linguistica": [
+          {
+            "id": 21,
+            "filtro": "Lingüística",
+            "pregunta": "¿Prefiero explicar verbalmente cómo llegar a un lugar en vez de dibujar un mapa?"
+          },
+          {
+            "id": 22,
+            "filtro": "Lingüística",
+            "pregunta": "¿Suelo entender mis emociones sin dificultad?"
+          },
+          {
+            "id": 23,
+            "filtro": "Lingüística",
+            "pregunta": "¿Soy bueno para expresar mis sentimientos a través de las palabras?"
+          },
+          {
+            "id": 24,
+            "filtro": "Lingüística",
+            "pregunta": "¿Disfruto de una conversación interesante?"
+          },
+          {
+            "id": 25,
+            "filtro": "Lingüística",
+            "pregunta": "¿Me resulta fácil escribir cartas detalladas o mensajes extensos?"
+          }
+        ],
+        "intrapersonal": [
+          {
+            "id": 26,
+            "filtro": "Intrapersonal",
+            "pregunta": "¿Soy consciente de mis propias emociones y sentimientos?"
+          },
+          {
+            "id": 27,
+            "filtro": "Intrapersonal",
+            "pregunta": "¿Disfruto de momentos de reflexión y autoevaluación?"
+          },
+          {
+            "id": 28,
+            "filtro": "Intrapersonal",
+            "pregunta": "¿Puedo identificar fácilmente mis propios pensamientos y creencias?"
+          },
+          {
+            "id": 29,
+            "filtro": "Intrapersonal",
+            "pregunta": "¿Me siento cómodo/a estando solo/a y reflexionando sobre mí mismo/a?"
+          },
+          {
+            "id": 30,
+            "filtro": "Intrapersonal",
+            "pregunta": "¿Entiendo cómo mis emociones afectan mis acciones y decisiones?"
+          }
+        ],
+        "matematica": [
+          {
+            "id": 31,
+            "filtro": "Matemática",
+            "pregunta": "¿Puedo realizar operaciones matemáticas mentales con rapidez?"
+          },
+          {
+            "id": 32,
+            "filtro": "Matemática",
+            "pregunta": "¿Me siento cómodo/a trabajando con calculadoras y computadoras?"
+          },
+          {
+            "id": 33,
+            "filtro": "Matemática",
+            "pregunta": "¿Soy capaz de entender gráficos y datos numéricos con facilidad?"
+          },
+          {
+            "id": 34,
+            "filtro": "Matemática",
+            "pregunta": "¿Encuentro patrones lógicos en situaciones cotidianas?"
+          },
+          {
+            "id": 35,
+            "filtro": "Matemática",
+            "pregunta": "¿Me gusta resolver problemas numéricos o matemáticos?"
+          }
+        ],
+        "interpersonal": [
+          {
+            "id": 36,
+            "filtro": "Interpersonal",
+            "pregunta": "¿Prefiero trabajar en equipo que de forma individual?"
+          },
+          {
+            "id": 37,
+            "filtro": "Interpersonal",
+            "pregunta": "¿Soy capaz de entender las emociones de los demás con facilidad?"
+          },
+          {
+            "id": 38,
+            "filtro": "Interpersonal",
+            "pregunta": "¿Me gusta ayudar a otros a manejar sus sentimientos?"
+          },
+          {
+            "id": 39,
+            "filtro": "Interpersonal",
+            "pregunta": "¿Puedo persuadir a otros para que sigan mis planes o ideas?"
+          },
+          {
+            "id": 40,
+            "filtro": "Interpersonal",
+            "pregunta": "¿Disfruto de reunirme con grupos de personas en eventos sociales?"
+          }
+        ]
+      }
     }
   }
