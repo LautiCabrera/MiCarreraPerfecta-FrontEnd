@@ -139,6 +139,42 @@
           "pregunta": "¿Valoras la honestidad y la integridad en tus decisiones?"
         }
       ],
+      "career": {
+        "gestion": [
+          {
+            "id": 1,
+            "pregunta": "¿Prefieres que sea de gestión pública o privada?",
+            "respuestas": {
+              "Pública": 2,
+              "Privada": 1
+            }
+          }
+        ],
+        "modalidad": [
+          {
+            "id": 2,
+            "pregunta": "¿Qué modalidad de cursado seria tu ideal?",
+            "respuestas": {
+              "Presencial": 1,
+              "Virtual": 2,
+              "Mixto": 3
+            }
+          }
+        ],
+        "duracion": [
+          {
+            "id": 3,
+            "pregunta": "¿Qué duración sería la ideal según tus preferencias?",
+            "respuestas": {
+              "Menos de un año": 0,
+              "Entre uno y dos años": 1,
+              "Entre dos y tres años": 2,
+              "Cuatro años": 3,
+              "Entre cinco y seis años": 4
+            }
+          }
+        ]
+      },
       "intelligences": {
         "espacial": [
           {

@@ -1,0 +1,35 @@
+html, body{
+    height: 100%;
+    background-color: #f0f7f4;
+}
+
+h2 {
+    padding-top: 48px;
+}
+
+main {
+    background-color: #f0f7f4;
+}
+
+form {
+    max-width: 700px; /* Ajusta el ancho máximo según tus preferencias */
+    margin: 50px auto 0;
+    background-color: #dfe9e3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Pie de pagina */
+
+footer{
+    background-color: #dfe9e3;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 20px; 
+    padding: 20px 0;
+}
+
+p {
+    margin: 0;
+}
