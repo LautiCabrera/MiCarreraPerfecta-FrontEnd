@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
     <!-- Style -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Mi Carrera Perfecta</title>
+    <title>Búsqueda - MiCarreraPerfecta</title>
 </head>
 <body>
 
@@ -22,13 +22,10 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav align-items-center mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" href="./prop.html">Propósito</a>
+                            <a class="nav-link active" href="./index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="./test.html">Realizar test</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="./find.html">Buscá tu carrera</a>
+                        <a class="nav-link active" href="./prop.html">Propósito</a>
                         </li>
                     </ul>
                 </div>
@@ -38,34 +35,10 @@
     </header>
 
     <main>
-        <!-- Descripción -->
-        <section class="container py-5">
-            <div class="text-center">
-                <img src="./assets/img/Logo.png" alt="Logo">
-                <h2 class="mt-4 mb-4">¡Encuentra tu camino hacia el futuro con nosotros!</h2>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-9">
-                    <p class="text">
-                        ¿Estás próximo a recibirte de tus estudios intermedios?
-                    </p> <br>
-                    <p class="text">
-                        ¿Cansado de buscar qué <b>estudiar</b>?
-                    </p> <br>
-                    <p class="text">
-                        ¿Eres de <b>Mendoza, Argentina</b>?
-                    </p> <br>
-                    <blockquote style="border-left: 10px solid #89b79c; padding: 5px;">
-                        <p class="text">
-                            Nosotros podemos orientar tu perfil hacia tu <i><b>carrera perfecta</b></i>.
-                        </p>
-                    </blockquote> <br>
-                    <p class="text">
-                        En cuestión de minutos sabrás qué carrera se adapta mejor a ti y a tus preferencias.
-                    </p>
-                </div>
-            </div>
-        </section>
+        <div class="container mb-5">
+            <h2 class="text-center mb-4">Filtro de carreras</h1>
+            <form id="formCareer" class="form-check"></form>
+        </div>
         <!-- Slider -->
         <section>
             <div class="slider-container">
@@ -89,12 +62,13 @@
     </main>
 
     <footer>
-        <div class="container py-4">
-            <p class="text-center">Todos los derechos reservados © 2024 <b>Lautaro Cabrera</b></p>
+        <div class="box__copyright">
+          <p>Todos los derechos reservados © 2024 <b>Lautaro Cabrera</b></p>
         </div>
     </footer>
-
+    
     <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/career.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

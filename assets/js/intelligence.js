@@ -75,13 +75,31 @@ uploadQuestions().then(() => {
 
     formulario.addEventListener('submit', function(event) {
         event.preventDefault();
-        enviarRespuestasIntelligences();
+        crearDatos();
     });
 })
 .catch((error) => {
     console.log("Error al cargar el JSON:", error);
 });
 
+// Obtener respuestas del formulario y contar inteligencias
+function obtenerRespuestas() {
+    const form = document.getElementById("formIntelligence");
+    const formData = new FormData(form);
+    const respuestas = {};
+
+    // Iterar sobre todos los elementos del formulario
+    for (const [name, value] of formData.entries()) {
+        if (name.startsWith("pregunta")) {
+            const pregunta = parseInt(name.match(/\d+/)[0]); // Extraer el número de la pregunta
+            respuestas[pregunta] = value === "true";
+        }
+    }
+
+    return Object.values(respuestas);
+}
+
+// Contar inteligencias
 function conteoInteligencias(responses) {
     const intelligencias = [];
     for (let i = 0; i < responses.length; i += 5) {
@@ -98,32 +116,46 @@ function conteoInteligencias(responses) {
     return intelligencias;
 }
 
-async function enviarRespuestasIntelligences() {
-    const form = document.getElementById("formIntelligence");
-    const formData = new FormData(form);
-    const respuestas = {};
-
-    // Itera sobre todos los elementos del formulario
-    for (const [name, value] of formData.entries()) {
-        if (name.startsWith("pregunta")) {
-            const pregunta = parseInt(name.match(/\d+/)[0]); // Extrae el número de la pregunta
-            respuestas[pregunta] = value === "true";
+// Obtener ubicación del usuario si es posible
+async function obtenerUbicacion() {
+    return new Promise((resolve, reject) => {
+        if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                resolve(position.coords);
+            }, function(error) {
+                console.error("Error al obtener la ubicación:", error);
+                resolve(null);
+            });
+        } else {
+            console.log("Geolocalización no disponible en este navegador.");
+            resolve(null);
         }
-    }
+    });
+}
+
+// Crear el objeto de datos con inteligencias y ubicación
+async function crearDatos() {
+    const intelligenceResponse = obtenerRespuestas(); 
+    const ubicationResponse = await obtenerUbicacion(); // Obtener ubicación si es posible
 
     const data = {
-        responses: Object.values(respuestas) // Convertir a una lista de booleanos
+        intelligenceResponse: conteoInteligencias(intelligenceResponse), // Utiliza la función para contar inteligencias
+        ubicationResponse: ubicationResponse ? [ubicationResponse.latitude, ubicationResponse.longitude] : [] // Crea un array con la latitud y longitud o una lista vacía
     };
 
-    let newData = conteoInteligencias(data.responses);
+    // Llamar a la función para enviar las respuestas de inteligencias
+    await enviarRespuestasIntelligences(data);
+}
 
+// Enviar respuestas al servidor
+async function enviarRespuestasIntelligences(data) {
     try {
         const respuesta = await fetch("http://localhost:8080/intelligencesFilter/procesar-respuestas", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(newData)
+            body: JSON.stringify(data)
         });
 
         if (respuesta.ok) {
