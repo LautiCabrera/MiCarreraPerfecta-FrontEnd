@@ -96,9 +96,9 @@ async function enviarRespuestasCareer() {
           body: JSON.stringify(respuestas) // Enviar directamente la lista de valores de respuesta
       });
       if (respuesta.ok) {
-          // window.location.href = `career.html`;
           const response = await respuesta.json(); // Convertir la respuesta a JSON
           console.log("Respuesta del servidor:", response);
+          window.location.href = `miCareer.html`;
       } else {
           console.log("Error al procesar respuestas:", respuesta.statusText);
       }
