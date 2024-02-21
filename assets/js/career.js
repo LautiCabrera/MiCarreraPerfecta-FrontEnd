@@ -1,3 +1,5 @@
+let careerId;
+
 uploadQuestions().then(() => {
   const formulario = document.getElementById('formCareer');
   const categorias = data.questions.career;
@@ -70,11 +72,11 @@ uploadQuestions().then(() => {
       event.preventDefault();
       enviarRespuestasCareer();
   });
+  document.dispatchEvent(new Event('formularioGenerado'));
 })
 .catch((error) => {
   console.log("Error al cargar el JSON:", error);
 });
-
 
 async function enviarRespuestasCareer() {
   // Capturar las respuestas del usuario
@@ -93,12 +95,11 @@ async function enviarRespuestasCareer() {
           headers: {
               "Content-Type": "application/json"
           },
-          body: JSON.stringify(respuestas) // Enviar directamente la lista de valores de respuesta
+          body: JSON.stringify(respuestas)
       });
       if (respuesta.ok) {
-          const response = await respuesta.json(); // Convertir la respuesta a JSON
-          console.log("Respuesta del servidor:", response);
-          window.location.href = `miCareer.html`;
+          const response = await respuesta.json(); 
+          window.location.href = `miCareer.html?careerFilter=${JSON.stringify(response)}`;
       } else {
           console.log("Error al procesar respuestas:", respuesta.statusText);
       }

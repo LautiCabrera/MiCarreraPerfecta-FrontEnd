@@ -9,6 +9,12 @@ html, body{
     font-size: 1.25em;
 }
 
+.text-card {
+  text-align: justify; 
+  text-indent: 0;
+  font-size: 1em;
+}
+
 blockquote {
     border-left: 10px solid #89b79c; 
     padding: 5px;
