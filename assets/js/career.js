@@ -86,9 +86,6 @@ async function enviarRespuestasCareer() {
       respuestas.push(parseInt(input.value));
   });
 
-  // Imprimir las respuestas por consola
-  console.log("Respuestas del usuario:", respuestas);
-
   try {
       const respuesta = await fetch("http://localhost:8080/careerFilter/procesar-respuestas", {
           method: "POST",
@@ -98,10 +95,14 @@ async function enviarRespuestasCareer() {
           body: JSON.stringify(respuestas)
       });
       if (respuesta.ok) {
-          const response = await respuesta.json(); 
-          window.location.href = `miCareer.html?careerFilter=${JSON.stringify(response)}`;
+          const response = await respuesta.text();
+          window.location.href = `miCareer.html?careerFilter=${response}`;
       } else {
-          console.log("Error al procesar respuestas:", respuesta.statusText);
+          // Crear el mensaje y agregarlo al contenedor
+          const mensaje = document.createElement('p');
+          mensaje.textContent = 'No se encontraron carreras con ninguno de los filtros aplicados. Por favor, intente con otros.';
+          mensaje.classList.add('text-center', 'alert', 'alert-danger');
+          document.getElementById('not-result').appendChild(mensaje);
       }
   } catch (error) {
       console.log("Error al procesar respuestas:", error);

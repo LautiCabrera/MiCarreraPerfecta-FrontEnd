@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Parámetro 'careerFilter' de la URL
     const urlParams = new URLSearchParams(window.location.search);
-    const careerId = urlParams.get('careerFilter');
+    const careerId = urlParams.get('careerFilter')
     getCareer(careerId);
 });
 
@@ -15,7 +15,6 @@ async function getCareer(careerId, selected) {
         });
         if (respuesta.ok) {
             const response = await respuesta.json();
-            console.log(response);
             crearCards(response);
         } else {
             console.log("Error al procesar respuestas:", respuesta.statusText);

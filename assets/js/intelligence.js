@@ -14,53 +14,64 @@ uploadQuestions().then(() => {
     Object.values(preguntasIntelligencias).forEach((inteligencia) => {
         inteligencia.forEach((pregunta) => {
             const preguntaElemento = document.createElement('div');
+            preguntaElemento.classList.add('form-group', 'row');
+    
+            // Crear divs para las opciones de respuesta
+            const divSi = document.createElement('div');
+            divSi.classList.add('col-sm-3');
+            divSi.style.marginLeft = '20px'; 
+
+            const divNo = document.createElement('div');
+            divNo.classList.add('col-sm-3'); 
+            divNo.style.marginLeft = '20px'; 
+
+    
+            // Crear label para la pregunta
             const label = document.createElement('label');
             label.textContent = pregunta.pregunta;
-
-            // Definir radio para seleccionar una opción
+            label.classList.add('col-sm-12', 'col-form-label');
+    
+            // Crear radios para seleccionar una opción
             const inputSi = document.createElement('input');
             inputSi.type = 'radio';
             inputSi.name = `pregunta${pregunta.id}`;
             inputSi.value = 'true';
             inputSi.required = true;
             inputSi.classList.add('form-check-input');
-
+    
             const inputNo = document.createElement('input');
             inputNo.type = 'radio';
             inputNo.name = `pregunta${pregunta.id}`;
             inputNo.value = 'false';
             inputNo.required = true;
             inputNo.classList.add('form-check-input');
-
-            // Crear divs para agrupar elementos
-            const divSi = document.createElement('div');
-            divSi.classList.add('form-check');
-            const divNo = document.createElement('div');
-            divNo.classList.add('form-check');
-
+    
             // Crear texto para indicar "Verdadero" y "Falso"
             const labelSi = document.createElement('span');
             labelSi.textContent = 'Verdadero';
             labelSi.classList.add('form-check-label');
+    
             const labelNo = document.createElement('span');
             labelNo.textContent = 'Falso';
             labelNo.classList.add('form-check-label');
-
-            // Agregar elementos al contenedor de la pregunta
+    
+            // Agregar elementos al contenedor de opciones de respuesta
             divSi.appendChild(inputSi);
             divSi.appendChild(labelSi);
+    
             divNo.appendChild(inputNo);
             divNo.appendChild(labelNo);
-
+    
+            // Agregar elementos al contenedor de la pregunta
             preguntaElemento.appendChild(label);
             preguntaElemento.appendChild(divSi);
             preguntaElemento.appendChild(divNo);
-
+    
             // Agregar la pregunta al contenedor principal
             contenedorPrincipal.appendChild(preguntaElemento);
         });
     });
-
+    
     // Agregar el contenedor principal al formulario
     contenedorExterno.appendChild(contenedorPrincipal);
     formulario.appendChild(contenedorExterno);
@@ -136,13 +147,13 @@ async function obtenerUbicacion() {
 // Crear el objeto de datos con inteligencias y ubicación
 async function crearDatos() {
     const intelligenceResponse = obtenerRespuestas(); 
-    const ubicationResponse = await obtenerUbicacion(); // Obtener ubicación si es posible
+    const locationResponse = await obtenerUbicacion(); // Obtener ubicación si es posible
 
     const data = {
         intelligenceResponse: conteoInteligencias(intelligenceResponse), // Utiliza la función para contar inteligencias
-        ubicationResponse: ubicationResponse ? [ubicationResponse.latitude, ubicationResponse.longitude] : [] // Crea un array con la latitud y longitud o una lista vacía
+        locationResponse: locationResponse ? [locationResponse.latitude, locationResponse.longitude] : [] // Crea un array con la latitud y longitud o una lista vacía
     };
-
+    
     // Llamar a la función para enviar las respuestas de inteligencias
     await enviarRespuestasIntelligences(data);
 }

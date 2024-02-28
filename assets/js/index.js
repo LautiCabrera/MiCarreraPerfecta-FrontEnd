@@ -13,3 +13,15 @@ async function uploadQuestions() {
       return [];
     }
 }
+
+function oneResponsePositive(formulario) {
+  const formData = new FormData(formulario);
+
+  // Itera sobre todos los elementos del formulario
+  for (const [name, value] of formData.entries()) {
+      if (value === 'true') {
+          return true; // Si encuentra al menos una respuesta positiva, devuelve true
+      }
+  }
+  return false; // Si no encuentra ninguna respuesta positiva, devuelve false
+}  
