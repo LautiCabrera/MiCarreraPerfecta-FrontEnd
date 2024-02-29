@@ -26,11 +26,11 @@ async function getCareer(careerId, selected) {
 
 function crearCards(data) {
     const container = document.getElementById('card-container'); 
-    container.innerHTML = '';
+    container.innerHTML = ''; 
 
     data.forEach(objeto => {
         const card = document.createElement('div');
-        card.classList.add('card', 'm-5', 'p-4');
+        card.classList.add('card', 'm-lg-5', 'p-lg-4', 'm-md-0', 'p-md-0');
         card.innerHTML = `
             <div class="card-body">
                 <h5 class="card-title">${objeto[0]}</h5><br>
