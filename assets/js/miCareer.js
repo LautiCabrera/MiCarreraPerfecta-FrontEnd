@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 async function getCareer(careerId, selected) {
     try {
-        const respuesta = await fetch(`http://localhost:8080/careerFilter/obtener-carrera-perfecta/${careerId}`, {
+        const respuesta = await fetch(`https://micarreraperfecta-backend-deploy.onrender.com/careerFilter/obtener-carrera-perfecta/${careerId}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"

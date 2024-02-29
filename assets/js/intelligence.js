@@ -161,7 +161,7 @@ async function crearDatos() {
 // Enviar respuestas al servidor
 async function enviarRespuestasIntelligences(data) {
     try {
-        const respuesta = await fetch("http://localhost:8080/intelligencesFilter/procesar-respuestas", {
+        const respuesta = await fetch("https://micarreraperfecta-backend-deploy.onrender.com/intelligencesFilter/procesar-respuestas", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

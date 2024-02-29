@@ -113,7 +113,7 @@ uploadQuestions().then(() => {
     };
 
     try {
-        const respuesta = await fetch("http://localhost:8080/preferenceFilter/procesar-respuestas", {
+        const respuesta = await fetch("https://micarreraperfecta-backend-deploy.onrender.com/preferenceFilter/procesar-respuestas", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

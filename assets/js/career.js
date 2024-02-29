@@ -87,7 +87,7 @@ async function enviarRespuestasCareer() {
   });
 
   try {
-      const respuesta = await fetch("http://localhost:8080/careerFilter/procesar-respuestas", {
+      const respuesta = await fetch("https://micarreraperfecta-backend-deploy.onrender.com/careerFilter/procesar-respuestas", {
           method: "POST",
           headers: {
               "Content-Type": "application/json"

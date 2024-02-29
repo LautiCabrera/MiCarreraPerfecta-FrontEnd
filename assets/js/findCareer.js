@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 async function searchCareers(searchTerm) {
     try {
-        const response = await fetch("http://localhost:8080/careerFilter/busqueda-carrera", {
+        const response = await fetch("https://micarreraperfecta-backend-deploy.onrender.com/careerFilter/busqueda-carrera", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
